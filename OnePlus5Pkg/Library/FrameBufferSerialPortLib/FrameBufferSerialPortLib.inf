@@ -11,7 +11,7 @@
 [Packages]
   MdePkg/MdePkg.dec
   ArmPkg/ArmPkg.dec
-  XiaomiMI6Pkg/XiaomiMI6Pkg.dec
+  OnePlus5Pkg/OnePlus5Pkg.dec
 
 [LibraryClasses]
   ArmLib
@@ -22,9 +22,9 @@
   CacheMaintenanceLib
 
 [Pcd]
-  gXiaomiMI6PkgTokenSpaceGuid.PcdMipiFrameBufferAddress
-  gXiaomiMI6PkgTokenSpaceGuid.PcdMipiFrameBufferWidth
-  gXiaomiMI6PkgTokenSpaceGuid.PcdMipiFrameBufferHeight
-  gXiaomiMI6PkgTokenSpaceGuid.PcdMipiFrameBufferPixelBpp
-  gXiaomiMI6PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleWidth
-  gXiaomiMI6PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleHeight
+  gOnePlus5PkgTokenSpaceGuid.PcdMipiFrameBufferAddress
+  gOnePlus5PkgTokenSpaceGuid.PcdMipiFrameBufferWidth
+  gOnePlus5PkgTokenSpaceGuid.PcdMipiFrameBufferHeight
+  gOnePlus5PkgTokenSpaceGuid.PcdMipiFrameBufferPixelBpp
+  gOnePlus5PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleWidth
+  gOnePlus5PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleHeight

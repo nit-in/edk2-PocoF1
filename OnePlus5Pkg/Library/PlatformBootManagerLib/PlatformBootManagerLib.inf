@@ -39,7 +39,7 @@
   MdeModulePkg/MdeModulePkg.dec
   MdePkg/MdePkg.dec
   ShellPkg/ShellPkg.dec
-  XiaomiMI6Pkg/XiaomiMI6Pkg.dec
+  OnePlus5Pkg/OnePlus5Pkg.dec
 
 [BuildOptions.AARCH64]
   GCC:*_*_*_CC_FLAGS = -Wno-unused-variable

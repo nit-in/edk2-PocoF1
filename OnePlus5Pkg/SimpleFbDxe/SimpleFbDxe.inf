@@ -16,7 +16,7 @@
   MdeModulePkg/MdeModulePkg.dec
   EmbeddedPkg/EmbeddedPkg.dec
   ArmPkg/ArmPkg.dec
-  XiaomiMI6Pkg/XiaomiMI6Pkg.dec
+  OnePlus5Pkg/OnePlus5Pkg.dec
 
 [LibraryClasses]
   BaseLib
@@ -35,9 +35,9 @@
   gEfiCpuArchProtocolGuid
 
 [FixedPcd]
-  gXiaomiMI6PkgTokenSpaceGuid.PcdMipiFrameBufferAddress
-  gXiaomiMI6PkgTokenSpaceGuid.PcdMipiFrameBufferWidth
-  gXiaomiMI6PkgTokenSpaceGuid.PcdMipiFrameBufferHeight
+  gOnePlus5PkgTokenSpaceGuid.PcdMipiFrameBufferAddress
+  gOnePlus5PkgTokenSpaceGuid.PcdMipiFrameBufferWidth
+  gOnePlus5PkgTokenSpaceGuid.PcdMipiFrameBufferHeight
 
 [Guids]
   gEfiMdeModulePkgTokenSpaceGuid
