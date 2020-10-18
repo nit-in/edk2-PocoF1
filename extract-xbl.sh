@@ -33,9 +33,9 @@ extract_dxe_with_depex() {
 
 copy_binary_files() {
 	extract_dxe_with_depex "90a49afd-422f-08ae-9611-e788d3804845" "EnvDxe"
-	#extract_dxe_without_depex "5e0eae60-eaed-4d75-b8bf-edbbaabc3f09" "SecurityDxe"
-	#extract_dxe_without_depex "c2f9a4f5-f7b4-43e7-ba99-5ea804cc103a" "ASN1X509Dxe"
-	#extract_dxe_without_depex "32c71e68-83a8-46ed-aed1-094e71b12057" "SecRSADxe"
+	extract_dxe_without_depex "5e0eae60-eaed-4d75-b8bf-edbbaabc3f09" "SecurityDxe"
+	extract_dxe_without_depex "c2f9a4f5-f7b4-43e7-ba99-5ea804cc103a" "ASN1X509Dxe"
+	extract_dxe_without_depex "32c71e68-83a8-46ed-aed1-094e71b12057" "SecRSADxe"
 	extract_dxe_with_depex "f541d663-4a48-40aa-aabf-ff158ccae34c" "SmemDxe"
 	extract_dxe_with_depex "8e9bd160-b184-11df-94e2-0800200c9a66" "DALSys"
 	extract_dxe_with_depex "af9763a2-033b-4109-8e17-56a98d380c92" "HWIODxeDriver"
@@ -57,17 +57,17 @@ copy_binary_files() {
 	extract_dxe_with_depex "5a5cb8ca-9382-4e0c-b383-77fb517cd9eb" "AdcDxe"
 	extract_dxe_with_depex "4bce7f36-428e-4393-99e3-7e0844404dba" "QcomChargerDxeLA"
 	extract_dxe_with_depex "5bd181db-0487-4f1a-ae73-820e165611b3" "ButtonsDxe"
-	#extract_dxe_without_depex "3adf8dda-1850-44c5-8c63-bb991849bc6f" "HashDxe"
-	#extract_dxe_without_depex "b0d3689e-11f8-43c6-8ece-023a29cec35b" "RngDxe"
+	extract_dxe_without_depex "3adf8dda-1850-44c5-8c63-bb991849bc6f" "HashDxe"
+	extract_dxe_without_depex "b0d3689e-11f8-43c6-8ece-023a29cec35b" "RngDxe"
 }
 
 patch_binary_files() {
-	bspatch $DEST_DIR/ClockDxe/ClockDxe.efi $DEST_DIR/ClockDxe/ClockDxe.patched.efi $DEST_DIR/ClockDxe/ClockDxe.diff
-	rm $DEST_DIR/ClockDxe/ClockDxe.efi
-	mv $DEST_DIR/ClockDxe/ClockDxe.patched.efi $DEST_DIR/ClockDxe/ClockDxe.efi
+	bspatch "$DEST_DIR/ClockDxe/ClockDxe.efi" "$DEST_DIR/ClockDxe/ClockDxe.patched.efi" "$DEST_DIR/ClockDxe/ClockDxe.diff"
+	rm "$DEST_DIR/ClockDxe/ClockDxe.efi"
+	mv "$DEST_DIR/ClockDxe/ClockDxe.patched.efi" "$DEST_DIR/ClockDxe/ClockDxe.efi"
 }
 
 cleanup
 extract_xbl
 copy_binary_files
-#patch_binary_files
+patch_binary_files
