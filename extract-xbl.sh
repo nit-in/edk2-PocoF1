@@ -2,7 +2,7 @@
 set -e
 
 EXTRACTED_DIR="./workspace/xbl_extract/fv_extracted"
-DEST_DIR="./OnePlus5Pkg/Binary"
+DEST_DIR="./PocoF1Pkg/Binary"
 
 cleanup() {
 	rm -rf ./workspace/xbl_extract

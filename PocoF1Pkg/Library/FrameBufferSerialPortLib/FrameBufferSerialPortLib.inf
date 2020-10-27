@@ -1,0 +1,30 @@
+[Defines]
+  INF_VERSION    = 0x00010005
+  BASE_NAME      = FrameBufferSerialPortLib
+  MODULE_TYPE    = BASE
+  VERSION_STRING = 1.0
+  LIBRARY_CLASS  = SerialPortLib
+
+[Sources.common]
+  FrameBufferSerialPortLib.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ArmPkg/ArmPkg.dec
+  PocoF1Pkg/PocoF1Pkg.dec
+
+[LibraryClasses]
+  ArmLib
+  PcdLib
+  IoLib
+  HobLib
+  CompilerIntrinsicsLib
+  CacheMaintenanceLib
+
+[Pcd]
+  gPocoF1PkgTokenSpaceGuid.PcdMipiFrameBufferAddress
+  gPocoF1PkgTokenSpaceGuid.PcdMipiFrameBufferWidth
+  gPocoF1PkgTokenSpaceGuid.PcdMipiFrameBufferHeight
+  gPocoF1PkgTokenSpaceGuid.PcdMipiFrameBufferPixelBpp
+  gPocoF1PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleWidth
+  gPocoF1PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleHeight
