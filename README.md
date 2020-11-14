@@ -1,31 +1,29 @@
-# edk2-oneplus5
-Attempt to create a minimal EDK2 for OnePlus 5.
+# PocoF1
+Attempt to create a minimal EDK2 for Poco F1.
 
 ## Status
-The phone boots EDK2 & enters crashdump 900E mode after sitting for ~10 seconds on a screen with:
+Need to work on
 ```
 Error: Failed to enable MMU
 ```
-![EDK2 MMU enable error on a OnePlus 5](progress.jpg)
-
 ### Working
-* Continuous Display
+* Nothing
 * ...
 
 ### Not Working
 * ...
 
 ## Building
-Tested on Ubuntu 20.04 & Arch Linux.
+Working on Void Linux
 
 First, clone EDK2:
 ```
 cd ..
-git clone https://github.com/tianocore/edk2.git --recursive
+for edk2 follow instructions from [here](https://github.com/tianocore/edk2)
 git clone https://github.com/tianocore/edk2-platforms.git
 ```
 
-You should have all three directories (`edk2`, `edk2-platforms` & `edk2-oneplus5`) side by side.
+You should have all three directories (`edk2`, `edk2-platforms` & `edk2-PocoF1`) side by side.
 
 Next, install the dependencies:
 
@@ -40,8 +38,23 @@ Arch Linux:
 sudo pacman -S --needed base-devel acpica git nasm python aarch64-linux-gnu-gcc p7zip bsdiff
 yay -S --needed abootimg-git uefi-firmware-parser-git
 ```
+Void Linux:
+
+```
+Will update soon
+
+```
 
 Then, extract the XBL binary from your device (the powerful `dd` will serve you), name it `xbl.elf` and place it in the current directory.
+
+```
+in_file=$(ls -lr /dev/block/by-name | echo $(grep "xbl") | cut -d " " -f 10)
+dd if=$in_file of=/sdcard/xbl.elf
+
+```
+this should return the xbl block device to internal storage
+(tested with terminal emulator with su)
+
 
 Now execute `./extract-xbl.sh` to get the proprietary blobs extracted.  
 If you just cloned this, also run `./firstrun.sh`.  
