@@ -41,7 +41,7 @@ yay -S --needed abootimg-git uefi-firmware-parser-git
 Void Linux:
 
 ```
-Will update soon
+sudo xbps-install -Suvy nasm cross-aarch64-linux-gnu abootimg acpica-utils bsdiff p7zip base-devel python3-pip git libuuid libuuid-devel python-devel gcc
 
 ```
 
